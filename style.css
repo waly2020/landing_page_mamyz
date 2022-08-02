@@ -18,20 +18,23 @@
   box-sizing: border-box;
 }
 
-header {
+.tete {
   width: 100%;
   height: 100vh;
 }
-header .contener {
+.tete.active {
+  filter: blur(5px);
+}
+.tete .contener {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 70px 1fr;
 }
-header .contener > * {
+.tete .contener > * {
   padding: 0 30px;
 }
-header .navigation {
+.tete .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -191,10 +194,11 @@ button {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 10px;
   left: 0;
-  bottom: 0;
-  background-color: #EE353D;
+  bottom: 7px;
+  transform: translateY(100%);
+  background-color: #fff;
 }
 .screen .envelopes {
   padding: 15px 5px 0 5px;
@@ -287,6 +291,130 @@ button {
   100% {
     transform: rotateY(0deg) rotate(20deg);
   }
+}
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.68);
+}
+.filter.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_content {
+  width: 78%;
+  height: 90%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.form {
+  position: relative;
+  background-color: #EE353D;
+  padding: 30px;
+  border-radius: 30px 0 0 30px;
+}
+.form h2 {
+  font-size: 2em;
+  color: #fff;
+  font-family: "bold";
+  text-align: center;
+  margin: 50px 0 40px 0;
+}
+.form form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 200px 40px;
+  gap: 10px;
+}
+.form form input,
+.form form textarea {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  font-family: "regular";
+  background-color: #fff;
+  color: #444;
+}
+.form form textarea {
+  grid-column: 1/span 2;
+  resize: none;
+}
+.form form button {
+  width: 100px;
+  color: #EE353D;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.671);
+  background-color: #fff;
+}
+.form .contacts {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.form .contacts p {
+  display: flex;
+  align-items: center;
+  font-family: "regular";
+  color: #fff;
+  font-size: 11px;
+}
+.form .contacts span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form .contacts span img {
+  height: 13px;
+}
+
+.logo_mamyz {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 30px 30px 0;
+}
+.logo_mamyz img {
+  width: 300px;
+}
+.logo_mamyz .open-contact {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px #000;
+  cursor: pointer;
+}
+.logo_mamyz .open-contact img {
+  width: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

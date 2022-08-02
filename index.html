@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <header>
+    <header class="tete">
         <div class="contener">
             <nav class="navigation">
                 <div class="logo"></div>
                 <div class="menu">
-                    <button class="contact">Contacter nous</button>
+                    <button class="contact open-contact">Contacter nous</button>
                     <button class="download">telecharger l'application</button>
                 </div>
             </nav>
@@ -90,6 +90,40 @@
             </div>
         </div>
     </header>
+    <div class="filter">
+        <div class="form_content">
+            <div class="form">
+                <h2>Nous vous ecoutons !</h2>
+                <form id="form">
+                    <input type="text" id="name" placeholder="nom">
+                    <input type="email" id="email" placeholder="votre adresse mail">
+                    <textarea name="message" id="message" placeholder="Comment pouvons nous vous aidez ?"></textarea>
+                    <button type="submit">Envoye</button>
+                </form>
+                <div class="contacts">
+                    <p><span class="icone">
+                            <img src="svg/phone.svg" alt="telephone">
+                        </span> +241 00000000</p>
+                    <p><span class="icone">
+                            <img src="svg/mail.svg" alt="e-mail">
+                        </span> mamyz@gmail.com</p>
+                    <p><span class="icone">
+                            <img src="svg/fbk.svg" alt="icone facebook">
+                        </span> #mamyz</p>
+                    <p><span class="icone">
+                            <img src="svg/map.svg" alt="localisation">
+                        </span> Libreville gabon</p>
+                </div>
+            </div>
+            <div class="logo_mamyz">
+                <div class="open-contact">
+                    <img src="svg/fermer.svg" alt="close">
+                </div>
+                <img src="images/logo.png">
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
