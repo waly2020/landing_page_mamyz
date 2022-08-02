@@ -1,0 +1,43 @@
+@import "./_fonts.scss";
+@import "./reset.scss";
+@import "./mixins.scss";
+@import "./variables";
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 15px 20px;
+    @include button;
+}
+
+.accueil {
+    background-color: $mainColor;
+}
+
+.download {
+    background-color: $logoColor;
+    margin-left: 20px;
+}
+
+h1 {
+    font-family: "bold";
+    font-size: 4vw;
+    margin-bottom: 40px;
+    color: rgb(21, 199, 21);
+}
+
+.logo {
+    width: 300px;
+}
+
+.content_contact {
+    width: 700px;
+    margin-top: 30px;
+    @include contact(relative, $logoColor, 0px);
+}
