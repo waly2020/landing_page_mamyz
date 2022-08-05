@@ -76,7 +76,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.5fr 1fr;
 }
 
 .texte_header {
@@ -96,10 +96,18 @@ button {
   color: #eee;
 }
 .texte_header button {
+  padding: 20px 15px;
+  margin-right: 10px;
+}
+.texte_header .download {
   background-color: #EE353D;
-  width: 220px;
-  height: 50px;
   box-shadow: 0 0 3px 1px rgba(21, 21, 21, 0.489);
+}
+.texte_header .contact {
+  background-color: #fff;
+  color: #EE353D;
+  box-shadow: 0 0 3px 1px rgba(21, 21, 21, 0.489);
+  display: none;
 }
 
 .images_header {
@@ -184,7 +192,6 @@ button {
 .screen {
   display: grid;
   grid-template-rows: 173px 1fr 60px;
-  background-color: #333;
   background-color: #EE353D;
 }
 .screen .header_phone {
@@ -415,6 +422,132 @@ button {
 }
 .logo_mamyz .open-contact img {
   width: 15px;
+}
+
+@media screen and (max-width: 1210px) {
+  .content .texte_header h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 980px) {
+  .telephone {
+    width: 200px;
+    height: 500px;
+    animation: none;
+    transform: rotate(0deg);
+  }
+  .screen {
+    grid-template-rows: 125px 1fr 60px;
+  }
+  .envelope {
+    height: 40px;
+    grid-template-columns: 40px 1fr 30px;
+  }
+  .envelope .taux {
+    font-size: 10px;
+  }
+  .envelope .date {
+    font-size: 11px;
+  }
+  .envelope .titre {
+    font-size: 12px;
+  }
+  .header_phone::after {
+    display: none;
+  }
+  .images_header {
+    justify-content: flex-end;
+  }
+  .content {
+    grid-template-columns: 1fr 210px;
+  }
+  .content .texte_header h1 {
+    font-size: 3.8em;
+  }
+}
+@media screen and (max-width: 980px) {
+  .content .texte_header {
+    width: 100%;
+  }
+  .content .texte_header h1 {
+    width: 100%;
+    font-size: 3.4em;
+  }
+}
+@media screen and (max-width: 742px) {
+  .content .texte_header {
+    width: 100%;
+  }
+  .content .texte_header h1 {
+    width: 100%;
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 630px) {
+  .images_header {
+    display: none;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .content .texte_header {
+    justify-content: center;
+    align-items: center;
+  }
+  .content .texte_header h1 {
+    text-align: center;
+    font-size: 7vw;
+  }
+  .content .texte_header h1 br {
+    display: none;
+  }
+  .content .texte_header h2 {
+    font-size: 3vw;
+  }
+  .menu .download {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navigation {
+    position: relative;
+  }
+  .navigation .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .menu {
+    display: none;
+  }
+  .content .texte_header h1 {
+    text-align: center;
+    font-size: 10vw;
+  }
+  .content .texte_header h2 {
+    font-size: 4vw;
+  }
+  .button_action {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button_action button {
+    padding: 15px 8px;
+    margin: 5px 0;
+  }
+  .button_action .contact {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 358px) {
+  .button_action {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
